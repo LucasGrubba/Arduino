@@ -91,15 +91,15 @@ void loop()
 
 void calcularDistancia(){
 
-long duracion, distancia1, distancia0;
+long tempo, distancia1, distancia0;
 if(distancia1 > 1) distancia0=distancia1;
 pinMode(3, OUTPUT);
 pinMode(A5, INPUT);
 digitalWrite(3, HIGH); 
 delayMicroseconds(10);
 digitalWrite(3, LOW);
-duracion = pulseIn(A5,HIGH,50000);
-distancia1 = (duracion/2) / 29;
+tempo = pulseIn(A5,HIGH,50000);
+distancia1 = (tempo/2) / 29;
 if (distancia1==0) distancia1=distancia0;
 ScratchBoardSensorReport(5, distancia1);
 
